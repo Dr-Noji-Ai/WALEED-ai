@@ -12,6 +12,10 @@ jobs:
         with:
           channel: 'stable'
           
+      # إنشاء هيكل وملفات مشروع أندرويد المفقودة تلقائياً
+      - name: Recreate Android Project Files
+        run: flutter create --platforms=android .
+          
       - name: Create Models Directory
         run: mkdir -p assets/models
         
